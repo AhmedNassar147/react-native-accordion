@@ -1,21 +1,30 @@
-export type LangData = Record<string, any>;
+import { StyleProp, ViewStyle, TextStyle } from "react-native";
+type CollapseAlign = "top" | "bottom" | "center";
 
-export type LangType = {
-  isRtl?: boolean;
-  lang: LangData;
-};
+export interface HeaderProps {
+  headerContainerStyle?: StyleProp<ViewStyle>;
+  headerText: string;
+  headerTextStyle?: StyleProp<TextStyle>;
+  extraText?: string;
+  extraTextStyle: StyleProp<TextStyle>;
 
-export type UpdatedLocalLangType = {
-  activeLang: string;
-  lang: LangData;
-};
-
-export interface LocalProps {
-  currentTranslation: LangData;
-  activeLang: string;
-  isRtl?: boolean;
+  toggleAccordion: () => void;
+  icon?: React.ReactNode;
+  headerIconContianerStyle?: StyleProp<ViewStyle>;
 }
 
-export interface UseLocalProps extends LocalProps {
-  setLang: (lngName: string) => void;
+export interface CollapsibleProps {
+  style?: StyleProp<ViewStyle>;
+  children?: any;
+  align?: CollapseAlign;
+  duration?: number;
+  collapsedHeight?: number;
+  collapsed: boolean;
+}
+
+export default interface AccorsionProps
+  extends Omit<HeaderProps, "toggleAccordion"> {
+  itemKey: string;
+  children: any;
+  onChange?: (orderKey: string) => void;
 }

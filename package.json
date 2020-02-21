@@ -1,14 +1,13 @@
 {
-  "name": "react-instant-translate",
-  "version": "1.5.0",
+  "name": "react-native-accordion",
+  "version": "1.1.0",
   "license": "MIT",
-  "description": "localization library for instant translation for react and react-native apps",
+  "description": "very customizable accordion component for react-native using hooks",
   "keywords": [
-    "localize",
-    "react-localize",
-    "react-translate",
+    "react-native",
     "react",
-    "translate"
+    "react-native-accordion",
+    "react-native-collapse"
   ],
   "author": "AhmedNassar147",
   "main": "./dist/index.ts",
@@ -17,11 +16,11 @@
     "dist"
   ],
   "bugs": {
-    "url": "https://github.com/AhmedNassar147/react-instant-translate/issues"
+    "url": "https://github.com/AhmedNassar147/react-native-accordion/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AhmedNassar147/react-instant-translate"
+    "url": "https://github.com/AhmedNassar147/react-native-accordion"
   },
   "scripts": {
     "build": "tsc -p ."
@@ -32,6 +31,7 @@
   "devDependencies": {
     "@types/node": "^13.7.4",
     "@types/react": "^16.9.22",
+    "@types/react-native": "^0.61.16",
     "tslib": "^1.11.0",
     "typescript": "^3.8.2"
   }
